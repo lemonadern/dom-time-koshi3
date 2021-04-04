@@ -11,7 +11,7 @@ import CardContent from '@material-ui/core/CardContent';
 
 
 function TabContentCard(props) {
-  const { index,times, ...other } = props;
+  const { index,times } = props;
   return(
     <Card>
       <CardContent>
@@ -25,6 +25,7 @@ function TabContentCard(props) {
 }
 
 function TabPanel(props) {
+  // eslint-disable-next-line
   const { children, value, index, times, ...other } = props;
 
   return (
@@ -72,7 +73,7 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
-
+  // eslint-disable-next-line
   const [times, setTimes] = React.useState([
     {
       breakfast: '08:15~08:35',
